@@ -14,6 +14,7 @@ class Gallery extends Component {
             currentImage: this.props.currentImage,
             containerWidth: 0
         };
+        console.log(this.state.editing)
 
         this.onResize = this.onResize.bind(this);
         this.closeLightbox = this.closeLightbox.bind(this);
