@@ -345,7 +345,8 @@ Gallery.defaultProps = {
     showCloseButton: true,
     showImageCount: true,
     lightboxWidth: 1024,
-    showLightboxThumbnails: false
+    showLightboxThumbnails: false,
+    editing: false,
 };
 
 module.exports = Gallery;
