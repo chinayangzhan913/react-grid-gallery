@@ -14,8 +14,6 @@ class Gallery extends Component {
             currentImage: this.props.currentImage,
             containerWidth: 0
         };
-        console.log(this.state.editing)
-
         this.onResize = this.onResize.bind(this);
         this.closeLightbox = this.closeLightbox.bind(this);
         this.gotoImage = this.gotoImage.bind(this);
@@ -28,6 +26,7 @@ class Gallery extends Component {
 
     componentDidMount () {
         this.onResize();
+        console.log(this.props.editing)
         window.addEventListener('resize', this.onResize);
     }
 
@@ -348,7 +347,7 @@ Gallery.defaultProps = {
     showImageCount: true,
     lightboxWidth: 1024,
     showLightboxThumbnails: false,
-    editing: false,
+    editing: true,
 };
 
 module.exports = Gallery;
