@@ -7,16 +7,16 @@ class Image extends Component {
         super(props);
 
         this.state = {
-            hover: true
+            hover: this.props.editing
         };
         console.log(this.props.editing)
     }
 
     componentWillReceiveProps(nextProps) {
         console.log(nextProps)
-        // this.setState({
-        //     hover: nextProps.editing
-        // });
+        this.setState({
+            hover: nextProps.editing
+        });
     }
 
     tagStyle () {
