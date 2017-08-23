@@ -239,6 +239,7 @@ class Gallery extends Component {
         var images = this.state.thumbnails.map((item, idx) => {
             return <Image
             key={"Image-"+idx+"-"+item.src}
+            editing={this.props.editing}
             item={item}
             index={idx}
             margin={this.props.margin}
@@ -249,7 +250,6 @@ class Gallery extends Component {
             tagStyle={this.props.tagStyle}
             tileViewportStyle={this.props.tileViewportStyle}
             thumbnailStyle={this.props.thumbnailStyle}
-            editing={this.props.editing}
             />;});
 
         return (
