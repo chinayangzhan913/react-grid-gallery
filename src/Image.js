@@ -6,19 +6,14 @@ class Image extends Component {
     constructor (props) {
         super(props);
 
-        if(this.props.editing){
-            this.state = {
-                hover: true
-            };
-        }else{
-            this.state = {
-                hover: false
-            };
-        }
+        this.state = {
+            hover: this.props.editing
+        };
         console.log(this.props.editing)
     }
 
     componentWillReceiveProps(nextProps) {
+        console.log(nextProps)
         this.setState({
             hover: nextProps.editing
         });

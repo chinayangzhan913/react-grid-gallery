@@ -6,7 +6,7 @@ import Image from './Image.js';
 class Gallery extends Component {
     constructor (props) {
         super(props);
-
+        console.log(this.props);
         this.state = {
             images: this.props.images,
             thumbnails: [],
