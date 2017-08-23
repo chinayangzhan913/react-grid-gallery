@@ -242,7 +242,6 @@ class Gallery extends Component {
             item={item}
             index={idx}
             margin={this.props.margin}
-            editing={this.props.editing}
             height={this.props.rowHeight}
             isSelectable={this.props.enableImageSelection}
             onClick={this.getOnClickThumbnailFn()}
@@ -250,7 +249,8 @@ class Gallery extends Component {
             tagStyle={this.props.tagStyle}
             tileViewportStyle={this.props.tileViewportStyle}
             thumbnailStyle={this.props.thumbnailStyle}
-                />;});
+            editing={this.props.editing}
+            />;});
 
         return (
                 <div id={this.props.id} className="ReactGridGallery" ref={(c) => this._gallery = c}>
@@ -326,6 +326,7 @@ Gallery.propTypes = {
     tileViewportStyle: PropTypes.func,
     thumbnailStyle: PropTypes.func,
     showLightboxThumbnails: PropTypes.bool,
+    editing: PropTypes.bool,
     onClickLightboxThumbnail: PropTypes.func,
     tagStyle: PropTypes.object
 };
